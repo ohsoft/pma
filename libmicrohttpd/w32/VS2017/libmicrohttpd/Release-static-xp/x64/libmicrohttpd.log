@@ -1,0 +1,24 @@
+﻿  base64.c
+  basicauth.c
+  connection.c
+  daemon.c
+  digestauth.c
+  internal.c
+  md5.c
+  memorypool.c
+  mhd_mono_clock.c
+  postprocessor.c
+  reason_phrase.c
+  response.c
+  tsearch.c
+  sysfdsetsize.c
+  mhd_str.c
+  mhd_threads.c
+  mhd_sockets.c
+  mhd_itc.c
+  mhd_compat.c
+  E:\Programing\projects\xmr-stak-dep\libmicrohttpd\src\include\microhttpd.h -> E:\Programing\projects\xmr-stak-dep\libmicrohttpd\w32\VS2017\Output\x64\microhttpd.h
+  1개 파일이 복사되었습니다.
+  libmicrohttpd.vcxproj -> E:\Programing\projects\xmr-stak-dep\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.lib
+  E:\Programing\projects\xmr-stak-dep\libmicrohttpd\w32\VS2017\libmicrohttpd\Release-static-xp\x64\libmicrohttpd.pdb -> E:\Programing\projects\xmr-stak-dep\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.pdb
+  1개 파일이 복사되었습니다.

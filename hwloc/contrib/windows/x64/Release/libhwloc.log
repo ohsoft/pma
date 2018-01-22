@@ -1,0 +1,59 @@
+﻿          1개 파일이 복사되었습니다.
+          1개 파일이 복사되었습니다.
+          1개 파일이 복사되었습니다.
+  
+  라이브러리를 검색하고 있습니다.
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\uuid.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\LIBCMT.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\OLDNAMES.lib 검색 중:
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\kernel32.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\libvcruntime.lib 검색 중:
+      E:\Windows Kits\10\lib\10.0.10240.0\ucrt\x64\libucrt.lib 검색 중:
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\uuid.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\LIBCMT.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\OLDNAMES.lib 검색 중:
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\kernel32.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\libvcruntime.lib 검색 중:
+      E:\Windows Kits\10\lib\10.0.10240.0\ucrt\x64\libucrt.lib 검색 중:
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\uuid.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\LIBCMT.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\OLDNAMES.lib 검색 중:
+  
+  라이브러리가 검색되었습니다.
+     E:\Programing\projects\xmr-stak-dep\hwloc\contrib\windows\x64\Release\libhwloc.lib 라이브러리 및 E:\Programing\projects\xmr-stak-dep\hwloc\contrib\windows\x64\Release\libhwloc.exp 개체를 생성하고 있습니다.
+  
+  라이브러리를 검색하고 있습니다.
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\uuid.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\LIBCMT.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\OLDNAMES.lib 검색 중:
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\kernel32.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\libvcruntime.lib 검색 중:
+      E:\Windows Kits\10\lib\10.0.10240.0\ucrt\x64\libucrt.lib 검색 중:
+  
+  라이브러리가 검색되었습니다.
+  코드를 생성하고 있습니다.
+  7 of 471 functions ( 1.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  
+  라이브러리를 검색하고 있습니다.
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\uuid.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\LIBCMT.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\OLDNAMES.lib 검색 중:
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\kernel32.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\libvcruntime.lib 검색 중:
+      E:\Windows Kits\10\lib\10.0.10240.0\ucrt\x64\libucrt.lib 검색 중:
+  
+  라이브러리가 검색되었습니다.
+  
+  라이브러리를 검색하고 있습니다.
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\uuid.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\LIBCMT.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\OLDNAMES.lib 검색 중:
+      C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\lib\x64\kernel32.lib 검색 중:
+      E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\lib\x64\libvcruntime.lib 검색 중:
+      E:\Windows Kits\10\lib\10.0.10240.0\ucrt\x64\libucrt.lib 검색 중:
+  
+  라이브러리가 검색되었습니다.
+  libhwloc.vcxproj -> E:\Programing\projects\xmr-stak-dep\hwloc\contrib\windows\x64\Release\libhwloc-5.dll
