@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{817C0869-1423-3C2D-BB10-78FD5703D577}</ProjectGuid>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>xmrstak_cuda_backend</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\xmr-stak-dep\xmr-stak\build\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xmrstak_cuda_backend.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xmrstak_cuda_backend</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xmrstak_cuda_backend.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xmrstak_cuda_backend</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\xmr-stak-dep\xmr-stak\build\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xmrstak_cuda_backend.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xmrstak_cuda_backend</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\xmr-stak-dep\xmr-stak\build\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xmrstak_cuda_backend.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xmrstak_cuda_backend</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR="Debug";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR=\"Debug\";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;bin\Debug\xmr-stak-backend.lib;bin\Debug\xmr-stak-c.lib;C:\xmr-stak-dep\libmicrohttpd\lib\libmicrohttpd.lib;C:\xmr-stak-dep\openssl\lib\ssleay32.lib;C:\xmr-stak-dep\openssl\lib\libeay32.lib;C:\xmr-stak-dep\hwloc\lib\libhwloc.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib;C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/xmr-stak-dep/xmr-stak/build/bin/Debug/xmrstak_cuda_backend.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/xmr-stak-dep/xmr-stak/build/bin/Debug/xmrstak_cuda_backend.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;C:\Program Files (x86)\AMD APP SDK\3.0\include;..\..\libmicrohttpd\include;..\..\openssl\include;..\..\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR="Release";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR=\"Release\";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;x64\Release\xmr-stak-backend.lib;x64\Release\xmr-stak-c.lib;..\..\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.lib;..\..\openssl\lib\ssleay32.lib;..\..\openssl\lib\libeay32.lib;..\..\hwloc\contrib\windows\x64\ReleaseStatic\libhwloc-5.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib;C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ProgramDataBaseFile>C:/xmr-stak-dep/xmr-stak/build/bin/Release/xmrstak_cuda_backend.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Manifest>
+      <EnableDpiAwareness>false</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR="MinSizeRel";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR=\"MinSizeRel\";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;bin\MinSizeRel\xmr-stak-backend.lib;bin\MinSizeRel\xmr-stak-c.lib;C:\xmr-stak-dep\libmicrohttpd\lib\libmicrohttpd.lib;C:\xmr-stak-dep\openssl\lib\ssleay32.lib;C:\xmr-stak-dep\openssl\lib\libeay32.lib;C:\xmr-stak-dep\hwloc\lib\libhwloc.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib;C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/xmr-stak-dep/xmr-stak/build/bin/MinSizeRel/xmrstak_cuda_backend.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/xmr-stak-dep/xmr-stak/build/bin/MinSizeRel/xmrstak_cuda_backend.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR="RelWithDebInfo";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR=\"RelWithDebInfo\";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;bin\RelWithDebInfo\xmr-stak-backend.lib;bin\RelWithDebInfo\xmr-stak-c.lib;C:\xmr-stak-dep\libmicrohttpd\lib\libmicrohttpd.lib;C:\xmr-stak-dep\openssl\lib\ssleay32.lib;C:\xmr-stak-dep\openssl\lib\libeay32.lib;C:\xmr-stak-dep\hwloc\lib\libhwloc.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib;C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/xmr-stak-dep/xmr-stak/build/bin/RelWithDebInfo/xmrstak_cuda_backend.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/xmr-stak-dep/xmr-stak/build/bin/RelWithDebInfo/xmrstak_cuda_backend.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="xmr-stak-backend.vcxproj">
+      <Project>{46bf2933-508e-3c73-a17c-b1350cf77cea}</Project>
+    </ProjectReference>
+    <ProjectReference Include="xmr-stak-c.vcxproj">
+      <Project>{b5bbc0a8-c0f1-37c2-b852-6846881533df}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\xmrstak\backend\nvidia\nvcc_code\cuda_core.cu">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\xmr-stak-dep\xmr-stak\build\CMakeFiles\xmrstak_cuda_backend.dir\xmrstak\backend\nvidia\nvcc_code
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/xmr-stak-dep/xmr-stak/build/CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=$(VCInstallDir)bin" -D build_configuration:STRING=$(ConfigurationName) -D generated_file:STRING=C:/xmr-stak-dep/xmr-stak/build/CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/$(Configuration)/xmrstak_cuda_backend_generated_cuda_core.cu.obj -D generated_cubin_file:STRING=C:/xmr-stak-dep/xmr-stak/build/CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/$(Configuration)/xmrstak_cuda_backend_generated_cuda_core.cu.obj.cubin.txt -P C:/xmr-stak-dep/xmr-stak/build/CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/xmrstak_cuda_backend_generated_cuda_core.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building NVCC (Device) object CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/$(Configuration)/xmrstak_cuda_backend_generated_cuda_core.cu.obj</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\xmr-stak-dep\xmr-stak\build\CMakeFiles\xmrstak_cuda_backend.dir\xmrstak\backend\nvidia\nvcc_code\$(Configuration)\xmrstak_cuda_backend_generated_cuda_core.cu.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/xmr-stak-dep/xmr-stak/xmrstak/backend/nvidia/nvcc_code/cuda_core.cu;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\builtin_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\channel_descriptor.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\common_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\common_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\device_double_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\device_double_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\device_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\device_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\host_config.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\host_defines.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\math_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\math_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\sm_70_rt.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\sm_70_rt.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_device_runtime_api.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_runtime.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_runtime_api.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_surface_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_texture_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_atomic_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_launch_parameters.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\driver_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\driver_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\host_config.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\host_defines.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\library_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_20_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_20_atomic_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_20_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_20_intrinsics.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_30_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_30_intrinsics.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_32_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_32_atomic_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_32_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_32_intrinsics.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_35_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_35_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_60_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_60_atomic_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_61_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_61_intrinsics.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\surface_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\surface_indirect_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\surface_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\texture_fetch_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\texture_indirect_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\texture_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\vector_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\vector_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\vector_types.h;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\cryptonight.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cryptonight.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_aes.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_core.cu;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_device.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_extra.hpp;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cerrno;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cfloat;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\climits;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cmath;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\concurrencysal.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\crtdefs.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstdarg;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstddef;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstdint;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstdio;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstdlib;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstring;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cwchar;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\eh.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\exception;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\excpt.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\initializer_list;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\intrin0.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\ios;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\iosfwd;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\iostream;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\istream;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\limits;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\limits.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\new;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\ostream;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\sal.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\stdarg.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\stdexcept;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\stdint.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\streambuf;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\string;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\system_error;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\type_traits;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\typeinfo;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\use_ansi.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\utility;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vadefs.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_exception.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_new.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_new_debug.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_string.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_typeinfo.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xatomic0.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xcall_once.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xfacet;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xiosbase;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xkeycheck.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xlocale;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xlocinfo;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xlocinfo.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xlocnum;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xmemory0;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xstddef;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xstring;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xstring_insert.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xtgmath.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xtr1common;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xutility;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\ymath.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\yvals.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\WTypesbase.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\apiset.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\apisetcconv.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\basetsd.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\bcrypt.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\cderr.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\driverspecs.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\guiddef.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\inaddr.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\kernelspecs.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\ktmtypes.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\minwindef.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\poppack.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\pshpack1.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\pshpack2.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\pshpack4.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\pshpack8.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\rpc.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\rpcasync.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\rpcdce.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\rpcdcep.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\rpcndr.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\rpcnterr.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\rpcsal.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\sdkddkver.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\sdv_driverspecs.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\specstrings.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\specstrings_strict.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\specstrings_undef.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\stralign.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\tvout.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\winapifamily.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\windef.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\winerror.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\winpackagefamily.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\winsmcrd.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\wnnc.h;E:\Windows Kits\10\Include\10.0.16299.0\shared\wtypes.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\assert.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_malloc.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memcpy_s.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memory.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_search.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_share.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_stdio_config.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_terminate.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wctype.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wdirect.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wio.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wprocess.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdlib.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wtime.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\crtdbg.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\ctype.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\errno.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\float.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\locale.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\malloc.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\math.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\share.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\stddef.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\stdlib.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\sys\stat.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\sys\types.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\wchar.h;E:\Windows Kits\10\Include\10.0.16299.0\um\OAIdl.h;E:\Windows Kits\10\Include\10.0.16299.0\um\ObjIdl.h;E:\Windows Kits\10\Include\10.0.16299.0\um\ObjIdlbase.h;E:\Windows Kits\10\Include\10.0.16299.0\um\Ole2.h;E:\Windows Kits\10\Include\10.0.16299.0\um\OleAuto.h;E:\Windows Kits\10\Include\10.0.16299.0\um\PropIdl.h;E:\Windows Kits\10\Include\10.0.16299.0\um\PropIdlBase.h;E:\Windows Kits\10\Include\10.0.16299.0\um\Unknwn.h;E:\Windows Kits\10\Include\10.0.16299.0\um\Unknwnbase.h;E:\Windows Kits\10\Include\10.0.16299.0\um\WinBase.h;E:\Windows Kits\10\Include\10.0.16299.0\um\WinNls.h;E:\Windows Kits\10\Include\10.0.16299.0\um\WinUser.h;E:\Windows Kits\10\Include\10.0.16299.0\um\Windows.h;E:\Windows Kits\10\Include\10.0.16299.0\um\cguid.h;E:\Windows Kits\10\Include\10.0.16299.0\um\combaseapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\coml2api.h;E:\Windows Kits\10\Include\10.0.16299.0\um\commdlg.h;E:\Windows Kits\10\Include\10.0.16299.0\um\consoleapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\datetimeapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\dde.h;E:\Windows Kits\10\Include\10.0.16299.0\um\ddeml.h;E:\Windows Kits\10\Include\10.0.16299.0\um\debugapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\dlgs.h;E:\Windows Kits\10\Include\10.0.16299.0\um\dpapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\enclaveapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\errhandlingapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\fibersapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\fileapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\handleapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\heapapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\ime_cmodes.h;E:\Windows Kits\10\Include\10.0.16299.0\um\imm.h;E:\Windows Kits\10\Include\10.0.16299.0\um\interlockedapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\ioapiset.h;E:\Windows Kits\10\Include\10.0.16299.0\um\jobapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\jobapi2.h;E:\Windows Kits\10\Include\10.0.16299.0\um\joystickapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\libloaderapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\lzexpand.h;E:\Windows Kits\10\Include\10.0.16299.0\um\mciapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\mcx.h;E:\Windows Kits\10\Include\10.0.16299.0\um\memoryapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\minwinbase.h;E:\Windows Kits\10\Include\10.0.16299.0\um\mmeapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\mmiscapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\mmiscapi2.h;E:\Windows Kits\10\Include\10.0.16299.0\um\mmsyscom.h;E:\Windows Kits\10\Include\10.0.16299.0\um\mmsystem.h;E:\Windows Kits\10\Include\10.0.16299.0\um\msxml.h;E:\Windows Kits\10\Include\10.0.16299.0\um\namedpipeapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\namespaceapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\nb30.h;E:\Windows Kits\10\Include\10.0.16299.0\um\ncrypt.h;E:\Windows Kits\10\Include\10.0.16299.0\um\objbase.h;E:\Windows Kits\10\Include\10.0.16299.0\um\oleidl.h;E:\Windows Kits\10\Include\10.0.16299.0\um\playsoundapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\processenv.h;E:\Windows Kits\10\Include\10.0.16299.0\um\processthreadsapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\processtopologyapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\profileapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\prsht.h;E:\Windows Kits\10\Include\10.0.16299.0\um\realtimeapiset.h;E:\Windows Kits\10\Include\10.0.16299.0\um\reason.h;E:\Windows Kits\10\Include\10.0.16299.0\um\rpcnsi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\rpcnsip.h;E:\Windows Kits\10\Include\10.0.16299.0\um\securityappcontainer.h;E:\Windows Kits\10\Include\10.0.16299.0\um\securitybaseapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\servprov.h;E:\Windows Kits\10\Include\10.0.16299.0\um\shellapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\stringapiset.h;E:\Windows Kits\10\Include\10.0.16299.0\um\synchapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\sysinfoapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\systemtopologyapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\threadpoolapiset.h;E:\Windows Kits\10\Include\10.0.16299.0\um\threadpoollegacyapiset.h;E:\Windows Kits\10\Include\10.0.16299.0\um\timeapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\timezoneapi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\urlmon.h;E:\Windows Kits\10\Include\10.0.16299.0\um\utilapiset.h;E:\Windows Kits\10\Include\10.0.16299.0\um\verrsrc.h;E:\Windows Kits\10\Include\10.0.16299.0\um\wincon.h;E:\Windows Kits\10\Include\10.0.16299.0\um\wincrypt.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winefs.h;E:\Windows Kits\10\Include\10.0.16299.0\um\wingdi.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winioctl.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winnetwk.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winnt.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winperf.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winreg.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winscard.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winsock.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winspool.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winsvc.h;E:\Windows Kits\10\Include\10.0.16299.0\um\winver.h;E:\Windows Kits\10\Include\10.0.16299.0\um\wow64apiset.h;C:\xmr-stak-dep\xmr-stak\build\CMakeFiles\xmrstak_cuda_backend.dir\xmrstak\backend\nvidia\nvcc_code\xmrstak_cuda_backend_generated_cuda_core.cu.obj.Release.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </None>
+    <None Include="..\xmrstak\backend\nvidia\nvcc_code\cuda_extra.cu">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\xmr-stak-dep\xmr-stak\build\CMakeFiles\xmrstak_cuda_backend.dir\xmrstak\backend\nvidia\nvcc_code
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/xmr-stak-dep/xmr-stak/build/CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=$(VCInstallDir)bin" -D build_configuration:STRING=$(ConfigurationName) -D generated_file:STRING=C:/xmr-stak-dep/xmr-stak/build/CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/$(Configuration)/xmrstak_cuda_backend_generated_cuda_extra.cu.obj -D generated_cubin_file:STRING=C:/xmr-stak-dep/xmr-stak/build/CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/$(Configuration)/xmrstak_cuda_backend_generated_cuda_extra.cu.obj.cubin.txt -P C:/xmr-stak-dep/xmr-stak/build/CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/xmrstak_cuda_backend_generated_cuda_extra.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building NVCC (Device) object CMakeFiles/xmrstak_cuda_backend.dir/xmrstak/backend/nvidia/nvcc_code/$(Configuration)/xmrstak_cuda_backend_generated_cuda_extra.cu.obj</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\xmr-stak-dep\xmr-stak\build\CMakeFiles\xmrstak_cuda_backend.dir\xmrstak\backend\nvidia\nvcc_code\$(Configuration)\xmrstak_cuda_backend_generated_cuda_extra.cu.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/xmr-stak-dep/xmr-stak/xmrstak/backend/nvidia/nvcc_code/cuda_extra.cu;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\builtin_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\channel_descriptor.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\common_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\common_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\device_double_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\device_double_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\device_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\device_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\host_config.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\host_defines.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\math_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\math_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\sm_70_rt.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\crt\sm_70_rt.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_device_runtime_api.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_runtime.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_runtime_api.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_surface_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\cuda_texture_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_atomic_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_launch_parameters.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\device_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\driver_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\driver_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\host_config.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\host_defines.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\library_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_20_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_20_atomic_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_20_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_20_intrinsics.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_30_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_30_intrinsics.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_32_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_32_atomic_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_32_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_32_intrinsics.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_35_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_35_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_60_atomic_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_60_atomic_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_61_intrinsics.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\sm_61_intrinsics.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\surface_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\surface_indirect_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\surface_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\texture_fetch_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\texture_indirect_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\texture_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\vector_functions.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\vector_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include\vector_types.h;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\cryptonight.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cryptonight.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_blake.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_device.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_extra.cu;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_extra.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_groestl.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_jh.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_keccak.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\backend\nvidia\nvcc_code\cuda_skein.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\jconf.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\misc\environment.hpp;C:\xmr-stak-dep\xmr-stak\xmrstak\params.hpp;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\algorithm;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cerrno;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cfloat;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\climits;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cmath;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\concurrencysal.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\crtdefs.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstdarg;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstddef;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstdint;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstdio;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstdlib;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cstring;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\cwchar;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\eh.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\exception;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\initializer_list;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\intrin0.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\ios;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\iosfwd;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\iostream;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\istream;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\limits;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\limits.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\new;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\ostream;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\sal.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\sstream;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\stdarg.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\stdexcept;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\stdint.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\streambuf;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\string;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\system_error;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\type_traits;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\typeinfo;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\use_ansi.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\utility;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vadefs.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_exception.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_new.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_new_debug.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_string.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vcruntime_typeinfo.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\vector;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xatomic0.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xcall_once.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xfacet;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xiosbase;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xkeycheck.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xlocale;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xlocinfo;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xlocinfo.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xlocnum;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xmemory;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xmemory0;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xstddef;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xstring;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xstring_insert.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xtgmath.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xtr1common;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\xutility;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\ymath.h;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\yvals.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\assert.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_malloc.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memcpy_s.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memory.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_search.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_share.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_stdio_config.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_terminate.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wctype.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wdirect.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wio.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wprocess.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdlib.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wtime.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\crtdbg.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\ctype.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\errno.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\float.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\locale.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\malloc.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\math.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\share.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\stddef.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\stdlib.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\sys\stat.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\sys\types.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h;E:\Windows Kits\10\Include\10.0.16299.0\ucrt\wchar.h;C:\xmr-stak-dep\xmr-stak\build\CMakeFiles\xmrstak_cuda_backend.dir\xmrstak\backend\nvidia\nvcc_code\xmrstak_cuda_backend_generated_cuda_extra.cu.obj.Release.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\xmrstak\backend\nvidia\jconf.cpp" />
+    <ClCompile Include="..\xmrstak\backend\nvidia\minethd.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="CMakeFiles\xmrstak_cuda_backend.dir\xmrstak\backend\nvidia\nvcc_code\Release\xmrstak_cuda_backend_generated_cuda_core.cu.obj" />
+    <Object Include="CMakeFiles\xmrstak_cuda_backend.dir\xmrstak\backend\nvidia\nvcc_code\Release\xmrstak_cuda_backend_generated_cuda_extra.cu.obj" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
