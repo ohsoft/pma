@@ -30,7 +30,10 @@ struct plugin
 	plugin(const std::string backendName, const std::string libName) : fn_starterBackend(nullptr), m_backendName(backendName)
 	{
 #ifdef WIN32
+		UINT errMode = GetErrorMode();
+		SetErrorMode(SEM_FAILCRITICALERRORS);
 		libBackend = LoadLibrary(TEXT((libName + ".dll").c_str()));
+		SetErrorMode(errMode);
 		if(!libBackend)
 		{
 			std::cerr << "WARNING: "<< m_backendName <<" cannot load backend library: " << (libName + ".dll") << std::endl;
