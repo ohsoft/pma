@@ -344,7 +344,7 @@ int main(int argc, char *argv[])
 
 	bool uacDialog = true;
 	bool pool_url_set = false;
-	for(size_t i = 1; i < argc-1; i++)
+	/*for(size_t i = 1; i < argc-1; i++)
 	{
 		std::string opName(argv[i]);
 		if(opName == "-o" || opName == "-O" || opName == "--url" || opName == "--tls-url")
@@ -529,7 +529,7 @@ int main(int argc, char *argv[])
 		SelfElevate(argv[0], minerArgs);
 	}
 #endif
-	
+	*/
 	// check if we need a guided start
 	if(!configEditor::file_exist(params::inst().configFile))
 		do_guided_config();
