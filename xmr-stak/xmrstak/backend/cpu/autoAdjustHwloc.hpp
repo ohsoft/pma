@@ -88,7 +88,8 @@ public:
 		}
 
 		configTpl.replace("CPUCONFIG",conf);
-		configTpl.write(params::inst().configFileCPU);
+		//configTpl.write(params::inst().configFileCPU);
+		params::inst().configFileCPUContent = configTpl.m_fileContent;
 		printer::inst()->print_msg(L0, "CPU configuration stored in file '%s'", params::inst().configFileCPU.c_str());
 		/* Destroy topology object. */
 		hwloc_topology_destroy(topology);

@@ -38,6 +38,10 @@ struct params
 	std::string configFileNVIDIA;
 	std::string configFileCPU;
 
+	std::string configFileAMDContent;
+	std::string configFileNVIDIAContent;
+	std::string configFileCPUContent;
+
 	params() :
 		binaryName("xmr-stak"),
 		executablePrefix(""),

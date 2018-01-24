@@ -33,7 +33,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -60,7 +61,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\xmr-stak-dep\xmr-stak\build\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xmr-stak-backend.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xmr-stak-backend</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
@@ -79,7 +79,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\;C:\Program Files (x86)\AMD APP SDK\3.0\include;..\..\libmicrohttpd\src\include;..\..\openssl\include;..\..\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -88,7 +88,7 @@
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -214,6 +214,7 @@
     <ClCompile Include="..\xmrstak\backend\cpu\hwlocMemory.cpp" />
     <ClCompile Include="..\xmrstak\backend\cpu\jconf.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/xmrstak/backend/cpu/jconf.cpp.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/xmrstak/backend/cpu/jconf.cpp.obj</ObjectFileName>
     </ClCompile>
     <ClCompile Include="..\xmrstak\backend\cpu\minethd.cpp" />
     <ClCompile Include="..\xmrstak\backend\globalStates.cpp" />
@@ -221,6 +222,7 @@
     <ClCompile Include="..\xmrstak\http\webdesign.cpp" />
     <ClCompile Include="..\xmrstak\jconf.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/xmrstak/jconf.cpp.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/xmrstak/jconf.cpp.obj</ObjectFileName>
     </ClCompile>
     <ClCompile Include="..\xmrstak\misc\console.cpp" />
     <ClCompile Include="..\xmrstak\misc\executor.cpp" />

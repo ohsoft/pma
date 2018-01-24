@@ -2,6 +2,7 @@
   basicauth.c
   connection.c
   daemon.c
+D:\Programming\projects\pma_git\libmicrohttpd\w32\VS2017\..\..\src\microhttpd\daemon.c(5854): warning C4133: '함수': 'unsigned int *'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
   digestauth.c
   internal.c
   md5.c
@@ -17,8 +18,8 @@
   mhd_sockets.c
   mhd_itc.c
   mhd_compat.c
-  E:\Programing\projects\xmr-stak-dep\libmicrohttpd\src\include\microhttpd.h -> E:\Programing\projects\xmr-stak-dep\libmicrohttpd\w32\VS2017\Output\x64\microhttpd.h
-  1개 파일이 복사되었습니다.
-  libmicrohttpd.vcxproj -> E:\Programing\projects\xmr-stak-dep\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.lib
-  E:\Programing\projects\xmr-stak-dep\libmicrohttpd\w32\VS2017\libmicrohttpd\Release-static-xp\x64\libmicrohttpd.pdb -> E:\Programing\projects\xmr-stak-dep\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.pdb
-  1개 파일이 복사되었습니다.
+  D:\Programming\projects\pma_git\libmicrohttpd\src\include\microhttpd.h -> D:\Programming\projects\pma_git\libmicrohttpd\w32\VS2017\Output\x64\microhttpd.h
+  1 File(s) copied
+  libmicrohttpd.vcxproj -> D:\Programming\projects\pma_git\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.lib
+  D:\Programming\projects\pma_git\libmicrohttpd\w32\VS2017\libmicrohttpd\Release-static-xp\x64\libmicrohttpd.pdb -> D:\Programming\projects\pma_git\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.pdb
+  1 File(s) copied

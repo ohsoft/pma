@@ -192,7 +192,7 @@ void do_guided_config()
 	auto& currency = params::inst().currency;
 	if(currency.empty())
 	{
-		prompt_once(prompted);
+		//prompt_once(prompted);
 
 		std::string tmp;
 #if defined(CONF_NO_AEON)

@@ -33,7 +33,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -60,12 +61,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\xmr-stak-dep\xmr-stak\build\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xmrstak_cuda_backend.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xmrstak_cuda_backend</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</GenerateManifest>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xmrstak_cuda_backend.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xmrstak_cuda_backend</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
@@ -89,7 +89,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\xmr-stak-dep\xmr-stak\.;C:\Program Files (x86)\AMD APP SDK\3.0\include;C:\xmr-stak-dep\libmicrohttpd\include;C:\xmr-stak-dep\openssl\include;C:\xmr-stak-dep\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\;C:\Program Files (x86)\AMD APP SDK\3.0\include;..\..\libmicrohttpd\src\include;..\..\openssl\include;..\..\hwloc\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -98,7 +98,7 @@
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;XMR_STAK_LARGEGRID=ON;XMRSTAK_CUDA_ARCH_LIST=30+35+37+50+52+60+61+62+70;BACKEND_TYPE=nvidia-amd-cpu;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;CMAKE_INTDIR="Debug";xmrstak_cuda_backend_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -117,7 +117,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;bin\Debug\xmr-stak-backend.lib;bin\Debug\xmr-stak-c.lib;C:\xmr-stak-dep\libmicrohttpd\lib\libmicrohttpd.lib;C:\xmr-stak-dep\openssl\lib\ssleay32.lib;C:\xmr-stak-dep\openssl\lib\libeay32.lib;C:\xmr-stak-dep\hwloc\lib\libhwloc.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64\cudart_static.lib;x64\Debug\xmr-stak-backend.lib;x64\Debug\xmr-stak-c.lib;..\..\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.lib;..\..\openssl\lib\ssleay32.lib;..\..\openssl\lib\libeay32.lib;..\..\hwloc\contrib\windows\x64\ReleaseStatic\libhwloc-5.lib;wsock32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib;C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>Debug</GenerateDebugInformation>

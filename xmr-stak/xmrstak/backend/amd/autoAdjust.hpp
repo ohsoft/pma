@@ -130,7 +130,8 @@ private:
 
 		configTpl.replace("PLATFORMINDEX",std::to_string(platformIndex));
 		configTpl.replace("GPUCONFIG",conf);
-		configTpl.write(params::inst().configFileAMD);
+		//configTpl.write(params::inst().configFileAMD);
+		params::inst().configFileAMDContent = configTpl.m_fileContent;
 		printer::inst()->print_msg(L0, "AMD: GPU configuration stored in file '%s'", params::inst().configFileAMD.c_str());
 	}
 

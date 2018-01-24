@@ -151,7 +151,7 @@ bool jconf::parse_config(const char* sFilename)
 	char * buffer;
 	size_t flen;
 
-	pFile = fopen(sFilename, "rb");
+	/*pFile = fopen(sFilename, "rb");
 	if (pFile == NULL)
 	{
 		printer::inst()->print_msg(L0, "Failed to open config file %s.", sFilename);
@@ -183,7 +183,10 @@ bool jconf::parse_config(const char* sFilename)
 		printer::inst()->print_msg(L0, "Read error while reading %s.", sFilename);
 		return false;
 	}
-	fclose(pFile);
+	fclose(pFile);*/
+	flen = params::inst().configFileAMDContent.length();
+	buffer = (char*)malloc(flen + 3);
+	memcpy(buffer + 1, params::inst().configFileAMDContent.c_str(), flen);
 
 	//Replace Unicode BOM with spaces - we always use UTF-8
 	unsigned char* ubuffer = (unsigned char*)buffer;

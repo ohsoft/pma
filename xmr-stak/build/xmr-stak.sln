@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xmr-stak", "xmr-stak.vcxproj", "{B778106B-30F0-3CF5-8EE5-632594AD37E3}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -26,8 +26,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xmrstak_opencl_backend", "x
 		{46BF2933-508E-3C73-A17C-B1350CF77CEA} = {46BF2933-508E-3C73-A17C-B1350CF77CEA}
 		{B5BBC0A8-C0F1-37C2-B852-6846881533DF} = {B5BBC0A8-C0F1-37C2-B852-6846881533DF}
 	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "..\TestApp\TestApp.vcxproj", "{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,22 +99,6 @@ Global
 		{E2780E8D-BAD1-3901-9314-1AE78D65485E}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 		{E2780E8D-BAD1-3901-9314-1AE78D65485E}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
 		{E2780E8D-BAD1-3901-9314-1AE78D65485E}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.Debug|x64.ActiveCfg = Debug|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.Debug|x64.Build.0 = Debug|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.Debug|x86.ActiveCfg = Debug|Win32
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.Debug|x86.Build.0 = Debug|Win32
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.MinSizeRel|x64.ActiveCfg = Release|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.MinSizeRel|x64.Build.0 = Release|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.MinSizeRel|x86.ActiveCfg = Release|Win32
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.MinSizeRel|x86.Build.0 = Release|Win32
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.Release|x64.ActiveCfg = Release|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.Release|x64.Build.0 = Release|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.Release|x86.ActiveCfg = Release|Win32
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.Release|x86.Build.0 = Release|Win32
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.RelWithDebInfo|x64.ActiveCfg = Release|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.RelWithDebInfo|x64.Build.0 = Release|x64
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
-		{4A580750-BD08-409C-8EF5-0ECC8A6AF9FA}.RelWithDebInfo|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

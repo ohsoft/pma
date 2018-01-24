@@ -101,7 +101,8 @@ private:
 		}
 
 		configTpl.replace("GPUCONFIG",conf);
-		configTpl.write(params::inst().configFileNVIDIA);
+		//configTpl.write(params::inst().configFileNVIDIA);
+		params::inst().configFileNVIDIAContent = configTpl.m_fileContent;
 		printer::inst()->print_msg(L0, "NVIDIA: GPU configuration stored in file '%s'", params::inst().configFileNVIDIA.c_str());
 	}
 
