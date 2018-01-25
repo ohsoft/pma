@@ -526,3 +526,203 @@ bool jconf::parse_config(const char* sFilename)
 
 	return true;
 }
+
+bool jconf::parse_config(const char *buf, int len)
+{
+	//FILE * pFile;
+	char * buffer;
+	size_t flen = len;
+
+	if (!check_cpu_features())
+	{
+		printer::inst()->print_msg(L0, "CPU support of SSE2 is required.");
+		return false;
+	}
+
+	if (flen >= 64 * 1024)
+	{
+		printer::inst()->print_msg(L0, "Oversized config file");
+		return false;
+	}
+
+	if (flen <= 16)
+	{
+		printer::inst()->print_msg(L0, "File is empty or too short - %s.");
+		return false;
+	}
+
+	buffer = (char*)malloc(flen + 3);
+	memcpy(buffer + 1, buf, len);
+
+	//Replace Unicode BOM with spaces - we always use UTF-8
+	unsigned char* ubuffer = (unsigned char*)buffer;
+	if (ubuffer[1] == 0xEF && ubuffer[2] == 0xBB && ubuffer[3] == 0xBF)
+	{
+		buffer[1] = ' ';
+		buffer[2] = ' ';
+		buffer[3] = ' ';
+	}
+
+	buffer[0] = '{';
+	buffer[flen] = '}';
+	buffer[flen + 1] = '\0';
+
+	prv->jsonDoc.Parse<kParseCommentsFlag | kParseTrailingCommasFlag>(buffer, flen + 2);
+	free(buffer);
+
+	if (prv->jsonDoc.HasParseError())
+	{
+		printer::inst()->print_msg(L0, "JSON config parse error(offset %llu): %s",
+			int_port(prv->jsonDoc.GetErrorOffset()), GetParseError_En(prv->jsonDoc.GetParseError()));
+		return false;
+	}
+
+
+	if (!prv->jsonDoc.IsObject())
+	{ //This should never happen as we created the root ourselves
+		printer::inst()->print_msg(L0, "Invalid config file. No root?\n");
+		return false;
+	}
+
+	for (size_t i = 0; i < iConfigCnt; i++)
+	{
+		if (oConfigValues[i].iName != i)
+		{
+			printer::inst()->print_msg(L0, "Code error. oConfigValues are not in order.");
+			return false;
+		}
+
+		prv->configValues[i] = GetObjectMember(prv->jsonDoc, oConfigValues[i].sName);
+
+		if (prv->configValues[i] == nullptr)
+		{
+			printer::inst()->print_msg(L0, "Invalid config file. Missing value \"%s\".", oConfigValues[i].sName);
+			return false;
+		}
+
+		if (!checkType(prv->configValues[i]->GetType(), oConfigValues[i].iType))
+		{
+			printer::inst()->print_msg(L0, "Invalid config file. Value \"%s\" has unexpected type.", oConfigValues[i].sName);
+			return false;
+		}
+	}
+
+	size_t pool_cnt = prv->configValues[aPoolList]->Size();
+	if (pool_cnt == 0)
+	{
+		printer::inst()->print_msg(L0, "Invalid config file. pool_list must not be empty.");
+		return false;
+	}
+
+	std::vector<size_t> pool_weights;
+	pool_weights.reserve(pool_cnt);
+
+	const char* aPoolValues[] = { "pool_address", "wallet_address", "pool_password", "use_nicehash", "use_tls", "tls_fingerprint", "pool_weight" };
+	Type poolValTypes[] = { kStringType, kStringType, kStringType, kTrueType, kTrueType, kStringType, kNumberType };
+
+	constexpr size_t pvcnt = sizeof(aPoolValues) / sizeof(aPoolValues[0]);
+	for (uint32_t i = 0; i < pool_cnt; i++)
+	{
+		const Value& oThdConf = prv->configValues[aPoolList]->GetArray()[i];
+
+		if (!oThdConf.IsObject())
+		{
+			printer::inst()->print_msg(L0, "Invalid config file. pool_list must contain objects.");
+			return false;
+		}
+
+		for (uint32_t j = 0; j < pvcnt; j++)
+		{
+			const Value* v;
+			if ((v = GetObjectMember(oThdConf, aPoolValues[j])) == nullptr)
+			{
+				printer::inst()->print_msg(L0, "Invalid config file. Pool %u does not have the value %s.", i, aPoolValues[j]);
+				return false;
+			}
+
+			if (!checkType(v->GetType(), poolValTypes[j]))
+			{
+				printer::inst()->print_msg(L0, "Invalid config file. Value %s for pool %u has unexpected type.", aPoolValues[j], i);
+				return false;
+			}
+		}
+
+		const Value* jwt = GetObjectMember(oThdConf, "pool_weight");
+		size_t wt;
+		if (!jwt->IsUint64() || (wt = jwt->GetUint64()) == 0)
+		{
+			printer::inst()->print_msg(L0, "Invalid pool list for pool %u. Pool weight needs to be an integer larger than zero.", i);
+			return false;
+		}
+
+		pool_weights.emplace_back(wt);
+	}
+
+	wt_max = *std::max_element(pool_weights.begin(), pool_weights.end());
+	wt_min = *std::min_element(pool_weights.begin(), pool_weights.end());
+
+	if (!prv->configValues[iCallTimeout]->IsUint64() ||
+		!prv->configValues[iNetRetry]->IsUint64() ||
+		!prv->configValues[iGiveUpLimit]->IsUint64())
+	{
+		printer::inst()->print_msg(L0,
+			"Invalid config file. call_timeout, retry_time and giveup_limit need to be positive integers.");
+		return false;
+	}
+
+	if (prv->configValues[iCallTimeout]->GetUint64() < 2 || prv->configValues[iNetRetry]->GetUint64() < 2)
+	{
+		printer::inst()->print_msg(L0,
+			"Invalid config file. call_timeout and retry_time need to be larger than 1 second.");
+		return false;
+	}
+
+	if (!prv->configValues[iVerboseLevel]->IsUint64() || !prv->configValues[iAutohashTime]->IsUint64())
+	{
+		printer::inst()->print_msg(L0,
+			"Invalid config file. verbose_level and h_print_time need to be positive integers.");
+		return false;
+	}
+
+	if (!prv->configValues[iHttpdPort]->IsUint() || prv->configValues[iHttpdPort]->GetUint() > 0xFFFF)
+	{
+		printer::inst()->print_msg(L0,
+			"Invalid config file. httpd_port has to be in the range 0 to 65535.");
+		return false;
+	}
+
+	if (prv->configValues[bAesOverride]->IsBool())
+		bHaveAes = prv->configValues[bAesOverride]->GetBool();
+
+	if (!bHaveAes)
+		printer::inst()->print_msg(L0, "Your CPU doesn't support hardware AES. Don't expect high hashrates.");
+
+	printer::inst()->set_verbose_level(prv->configValues[iVerboseLevel]->GetUint64());
+
+	if (GetSlowMemSetting() == unknown_value)
+	{
+		printer::inst()->print_msg(L0,
+			"Invalid config file. use_slow_memory must be \"always\", \"no_mlck\", \"warn\" or \"never\"");
+		return false;
+	}
+
+#ifdef _WIN32
+	if (GetSlowMemSetting() == no_mlck)
+	{
+		printer::inst()->print_msg(L0, "On Windows large pages need mlock. Please use another option.");
+		return false;
+	}
+#endif // _WIN32
+
+	if (prv->configValues[bFlushStdout]->IsBool())
+	{
+		bool bflush = prv->configValues[bFlushStdout]->GetBool();
+		printer::inst()->set_flush_stdout(bflush);
+		if (bflush)
+		{
+			printer::inst()->print_msg(L0, "Flush stdout forced.");
+		}
+	}
+
+	return true;
+}

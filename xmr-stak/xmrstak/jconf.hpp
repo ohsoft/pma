@@ -19,6 +19,7 @@ public:
 	};
 
 	bool parse_config(const char* sFilename = xmrstak::params::inst().configFile.c_str());
+	bool parse_config(const char *buf, int len);
 
 	struct pool_cfg {
 		const char* sPoolAddr;
