@@ -119,7 +119,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\..\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.lib;..\..\openssl\lib\ssleay32.lib;..\..\openssl\lib\libeay32.lib;..\..\hwloc\contrib\windows\x64\ReleaseStatic\libhwloc-5.lib;wsock32.lib;ws2_32.lib;x64\Release\xmr-stak-c.lib;x64\Release\xmr-stak-backend.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\libmicrohttpd\w32\VS2017\Output\x64\libmicrohttpd.lib;..\..\openssl\lib\ssleay32.lib;..\..\openssl\lib\libeay32.lib;..\..\hwloc\contrib\windows\x64\ReleaseStatic\libhwloc-5.lib;wsock32.lib;ws2_32.lib;x64\Debug\xmr-stak-c.lib;x64\Debug\xmr-stak-backend.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib;C:/Program Files (x86)/AMD APP SDK/3.0/lib/x86_64/OpenCL.lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>Debug</GenerateDebugInformation>
